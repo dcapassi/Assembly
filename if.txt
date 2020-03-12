@@ -1,0 +1,35 @@
+;#include <stdio.h>
+;int main()
+;{
+;    //Estruturas condicionais
+;    // if
+;    int a = 1;
+;    int b;
+;    
+;    if (a == 1){
+;        b = 1;
+;    }else {
+;        b = 0;
+;    }
+;    return 0;    
+;}
+
+
+;R0 recebe 1
+MOV R0, #1
+
+;Compara R0 e o valor #1 
+;Salta se tiverem valores diferentes
+CJNE R0,#01h,ELSE 
+MOV R1, #1
+LJMP FIM
+
+;R1 recebe 0 se condicao for falsa
+ELSE: MOV R1, #0
+
+FIM :NOP
+
+
+
+
+
