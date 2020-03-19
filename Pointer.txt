@@ -1,0 +1,34 @@
+;#include <stdio.h>
+;
+;int main()
+;{
+;    int *a = 0;
+;    int b = 10;
+;    
+;    a = &b;
+;    *a = 20;
+;    
+;    
+;    printf("%d",b);
+;}
+;
+;
+
+;R0 recebe 1
+;Adiciona 10 no Registrador 10
+MOV R0, #10
+;Armazena em R1 o endereço de R0
+MOV R1, #000h
+
+;Move para o acumulador o valor que aponto R1
+MOV A, @R1
+;Adiciona 20
+ADD A, #20
+
+;Joga de A para o registrador R1
+MOV R1, A
+
+;Joga do registador para R1
+MOV ACC, @R1;
+
+
