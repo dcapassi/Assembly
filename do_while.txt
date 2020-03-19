@@ -32,7 +32,7 @@
 ;Contador(R0) recebe 0
 MOV R0, #0
 ;R1 recebe 0
-MOV R1, #1
+MOV R1, #0
 
 DO:
 ;Soma 1 no R1
